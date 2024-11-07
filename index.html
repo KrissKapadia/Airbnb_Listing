@@ -1,0 +1,97 @@
+<!-- /****************************************************************************
+* I declare that this assignment is my own work in accordance with the Seneca Academic
+* Policy. No part of this assignment has been copied manually or electronically from
+* any other source (including web sites) or distributed to other students.
+*
+* https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+*
+* Assignment: 2247 / 2
+* Student Name: Kriss Kapadia
+* Student Email: kakapadia@myseneca.ca
+* Course/Section: WEB422/ZAA
+* Deployment URL: https://web-422-ass1.vercel.app
+*
+***************************************************************************** /-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriss Kapadia - Airbnb Listings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Kriss Kapadia - Airbnb Listings</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <form id="searchForm" class="d-flex">
+                    <input class="form-control me-2" type="search" id="name" placeholder="Listing Name" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-danger ms-2" type="button" id="clearForm">Clear</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <table id="listingsTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-start">
+                        <li class="page-item">
+                            <a class="page-link" href="#" id="previous-page" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#" id="current-page"></a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" id="next-page" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script> 
+</body>
+</html>
